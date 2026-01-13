@@ -17,7 +17,7 @@ export default function ServicesSection() {
       id="services"
       eyebrow="Layanan"
       title="Layanan Website Sesuai Kebutuhan Bisnismu"
-      subtitle="Setiap website dibuat dengan tujuan yang jelas — bukan asal jadi."
+      subtitle="Setiap website dibuat dengan tujuan yang jelas - bukan asal jadi."
       className="py-14"
     >
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -26,7 +26,7 @@ export default function FinalCtaSection() {
               </h2>
 
               <p className="mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-white/70 sm:text-base">
-                Konsultasi gratis untuk menentukan solusi terbaik bagi bisnismu. Tanpa paksaan, tanpa biaya—dibantu dari awal.
+                Konsultasi gratis untuk menentukan solusi terbaik bagi bisnismu. Tanpa paksaan, tanpa biaya-dibantu dari awal.
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">

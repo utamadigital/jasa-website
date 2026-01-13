@@ -93,8 +93,8 @@ export default function TestimonialsSection() {
     <SectionShell
       id="testimonials"
       eyebrow="TESTIMONI"
-      title="Testimoni yang terasa nyata (bukan sekadar ‘bagus’) 😄"
-      subtitle="Ini contoh feedback yang biasanya muncul setelah website dibuat lebih rapi, CTA jelas, dan struktur konten lebih meyakinkan."
+      title=""
+      subtitle=""
     >
       <MotionIn>
         <Card className="p-6 sm:p-8">
