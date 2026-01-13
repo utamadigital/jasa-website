@@ -209,7 +209,7 @@ export default function HeroSection({ content }: { content: any }) {
   const badge = c.badge || "WordPress Specialist • Website untuk UMKM & profesional kreatif";
   const line1 = c.headlineLine1 || "Website bukan sekadar tampilan.";
   const prefix = c.headlineLine2Prefix || "Tapi alat untuk";
-  const words: string[] = c.rotatingWords || ["mendatangkan pelanggan", "naikin trust", "bikin brand terlihat serius"];
+  const words: string[] = c.rotatingWords || ["mendatangkan lead", "naikin trust", "brand terlihat serius"];
   const desc =
     c.desc ||
     "Saya bantu pemilik bisnis dan profesional kreatif membangun website yang cepat, rapi, SEO-ready, dan dirancang untuk meningkatkan kepercayaan calon pelanggan.";
