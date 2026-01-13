@@ -34,11 +34,11 @@ export default function AboutSection({ content }: { content?: any }) {
 
   const profileLabel = a.profileLabel || "Foto / Profil";
   const profileName = a.profileName || "Febrian Budi Utama";
-  const profileRole = a.profileRole || "Web Designer • WordPress Specialist";
+  const profileRole = a.profileRole || "Web Designer • Web Specialist";
   const focusTitle = a.focusTitle || "Fokus";
   const focusText = a.focusText || "Website yang menghasilkan leads";
   const nicheTitle = a.nicheTitle || "Niche";
-  const nicheText = a.nicheText || "UMKM • Jasa • Kreatif";
+  const nicheText = a.nicheText || "UMKM • Jasa • Kreatif • Corporate";
 
   return (
     <SectionShell id="about" eyebrow={eyebrow} title={title} subtitle={subtitle} className="py-14">
