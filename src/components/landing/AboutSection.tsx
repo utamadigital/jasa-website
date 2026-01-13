@@ -34,7 +34,7 @@ export default function AboutSection({ content }: { content?: any }) {
 
   const profileLabel = a.profileLabel || "Foto / Profil";
   const profileName = a.profileName || "Febrian Budi Utama";
-  const profileRole = a.profileRole || "Web Designer • Web Specialist";
+  const profileRole = a.profileRole || "Web Specialist";
   const focusTitle = a.focusTitle || "Fokus";
   const focusText = a.focusText || "Website yang menghasilkan leads";
   const nicheTitle = a.nicheTitle || "Niche";

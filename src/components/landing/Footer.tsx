@@ -9,7 +9,8 @@ export default function Footer() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <div className="text-sm font-semibold text-white">Febrian Budi Utama</div>
-            <div className="mt-1 text-xs text-white/60">Web Designer & WordPress Specialist</div>
+            <div className="mt-1 text-xs text-white/60">Web Specialist</div>
+			<div className="mt-1 text-xs text-white/60">hello@utamadigital.id</div>
           </div>
 
           <div className="flex flex-wrap gap-2">
