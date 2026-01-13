@@ -94,7 +94,7 @@ export default function TestimonialsSection() {
       id="testimonials"
       eyebrow="TESTIMONI"
       title="Testimoni yang terasa nyata (bukan sekadar ‘bagus’) 😄"
-      desc="Ini contoh feedback yang biasanya muncul setelah website dibuat lebih rapi, CTA jelas, dan struktur konten lebih meyakinkan."
+      subtitle="Ini contoh feedback yang biasanya muncul setelah website dibuat lebih rapi, CTA jelas, dan struktur konten lebih meyakinkan."
     >
       <MotionIn>
         <Card className="p-6 sm:p-8">

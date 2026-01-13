@@ -4,7 +4,7 @@ import { SectionShell } from "./SectionShell";
 import { Card, MotionIn, PrimaryButton } from "./ui";
 import { scrollToId } from "@/lib/utils";
 
-export default function AboutSection({ content }: { content: any }) {
+export default function AboutSection({ content }: { content?: any }) {
   const a = content?.about || {};
 
   const eyebrow = a.eyebrow || "Tentang Saya";
