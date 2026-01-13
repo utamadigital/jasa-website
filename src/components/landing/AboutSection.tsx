@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { SectionShell } from "./SectionShell";
 import { Card, MotionIn, PrimaryButton } from "./ui";
 import { scrollToId } from "@/lib/utils";
@@ -28,9 +30,18 @@ export default function AboutSection({ content }: { content?: any }) {
   const ctaHref = a.ctaHref || "#contact";
   const helperText = a.helperText || "Gratis • Tanpa komitmen • Dibantu pilih paket";
 
-  const imgUrl =
-    a.profileImageUrl ||
-    "https://utamadigital.id/wp-content/uploads/2025/11/Gemini_Generated_Image_u2hihwu2hihwu2hi.png";
+  const defaultImgUrl = "https://utamadigital.id/wp-content/uploads/2025/11/Gemini_Generated_Image_u2hihwu2hihwu2hi.png";
+
+  const imgUrl = a.profileImageUrl || defaultImgUrl;
+
+  const [imgSrc, setImgSrc] = useState(imgUrl);
+
+  useEffect(() => {
+    setImgSrc(imgUrl);
+  }, [imgUrl]);
+
+  const toProxy = (u: string) =>
+    "https://images.weserv.nl/?url=" + encodeURIComponent(u.replace(/^https?:\/\//, ""));
 
   const profileLabel = a.profileLabel || "Foto / Profil";
   const profileName = a.profileName || "Febrian Budi Utama";
@@ -82,11 +93,16 @@ export default function AboutSection({ content }: { content?: any }) {
                 {/* Photo */}
                 <div className="mt-3 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/40">
                   <img
-                    src={imgUrl}
+                    src={imgSrc}
                     alt={profileName}
                     className="h-56 w-full object-cover"
-                    loading="lazy"
+                    loading="eager"
                     referrerPolicy="no-referrer"
+                    crossOrigin="anonymous"
+                    onError={() => {
+                      // Retry via proxy if hotlink/cdn blocks direct load
+                      if (imgSrc === imgUrl) setImgSrc(toProxy(imgUrl));
+                    }}
                   />
                 </div>
 
