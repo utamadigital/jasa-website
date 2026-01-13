@@ -222,7 +222,7 @@ export default function HeroSection({ content }: { content: any }) {
       "Website mudah dikelola sendiri (WordPress)",
     ];
 
-  const primary = c.primaryCta || { label: "Konsultasi Gratis Sekarang", href: "#contact" };
+  const primary = c.primaryCta || { label: "Konsultasi Gratis", href: "#contact" };
   const secondary = c.secondaryCta || { label: "Lihat Paket & Harga", href: "#paket" };
 
   const mini = c.miniValues || [
