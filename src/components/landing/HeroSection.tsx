@@ -235,7 +235,7 @@ export default function HeroSection({ content }: { content: any }) {
     <section id="home" className="relative">
       <PremiumHeroBackground />
 
-      <div className="mx-auto max-w-6xl px-4 pt-20 sm:pt-24 lg:pt-28">
+      <div className="mx-auto max-w-6xl px-4 pt-10 sm:pt-12 lg:pt-14">
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Left */}
           <div className="lg:col-span-7">
@@ -274,26 +274,34 @@ export default function HeroSection({ content }: { content: any }) {
             </div>
 
             <MotionIn delay={0.34}>
-              <div className="mt-7 flex flex-wrap items-center gap-3">
-                <PrimaryButton
-                  onClick={() => scrollToId(primary.href)}
-                  className="h-11 px-5"
-                >
-                  {primary.label}
-                </PrimaryButton>
+  <div
+    className="
+      mt-7
+      grid grid-cols-2 gap-3
+      sm:flex sm:flex-wrap sm:items-center sm:gap-3
+    "
+  >
+    <PrimaryButton
+      onClick={() => scrollToId(primary.href)}
+      className="h-11 w-full px-5"
+    >
+      {primary.label}
+    </PrimaryButton>
 
-                <SecondaryButton
-                  onClick={() => scrollToId(secondary.href)}
-                  className="h-11 px-5"
-                >
-                  {secondary.label}
-                </SecondaryButton>
+    <SecondaryButton
+      onClick={() => scrollToId(secondary.href)}
+      className="h-11 w-full px-5"
+    >
+      {secondary.label}
+    </SecondaryButton>
 
-                <div className="text-xs text-white/55">
-                  Gratis • Tanpa komitmen • Dibantu pilih paket yang tepat
-                </div>
-              </div>
-            </MotionIn>
+    {/* helper text: full width di mobile, inline di desktop */}
+    <div className="col-span-2 text-xs text-white/55 sm:col-auto">
+      Gratis • Tanpa komitmen • Dibantu pilih paket yang tepat
+    </div>
+  </div>
+</MotionIn>
+
 
             <MotionIn delay={0.42}>
               <div className="mt-7 grid gap-3 sm:grid-cols-3">
