@@ -313,9 +313,9 @@ export default function HeroSection({ content }: { content: any }) {
           </div>
 
           {/* Right */}
-          <div className="lg:col-span-5">
-            <PreviewStack content={content} />
-          </div>
+          <div className="lg:col-span-5 lg:-mt-6">
+  <PreviewStack content={content} />
+</div>
         </div>
 
         {/* Soft divider into next section */}
