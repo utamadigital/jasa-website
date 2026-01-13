@@ -1,7 +1,6 @@
 import PreloaderShell from "@/components/landing/PreloaderShell";
 import LandingHeader from "@/components/landing/LandingHeader";
 import HeroSection from "@/components/landing/HeroSection";
-import AudienceSlidesSection from "@/components/landing/AudienceSlidesSection";
 import { readSiteContent } from "@/lib/siteContent";
 import MiniProofStrip from "@/components/landing/MiniProofStrip";
 import AboutSection from "@/components/landing/AboutSection";
@@ -22,9 +21,8 @@ export default function Page() {
       <LandingHeader />
       <main>
         <HeroSection content={content} />
-        <AudienceSlidesSection content={content} />
         <MiniProofStrip />
-        <AboutSection content={content} />
+        <AboutSection />
         <ServicesSection />
         <PricingSection />
         <ProcessSection />

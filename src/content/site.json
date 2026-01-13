@@ -1,0 +1,230 @@
+{
+  "brand": {
+    "name": "Febrian",
+    "tag": "Web Designer"
+  },
+  "contact": {
+    "whatsappNumber": "6285643232300",
+    "whatsappMessage": "Halo Febrian, saya mau konsultasi pembuatan website.",
+    "email": "",
+    "instagram": ""
+  },
+  "hero": {
+    "badge": "WordPress Specialist • Website untuk UMKM & profesional kreatif",
+    "headlineLine1": "Website bukan sekadar tampilan.",
+    "headlineLine2Prefix": "Tapi alat untuk",
+    "rotatingWords": [
+      "mendatangkan pelanggan",
+      "naikin trust",
+      "bikin brand terlihat serius",
+      "siap untuk iklan"
+    ],
+    "desc": "Saya membantu pemilik bisnis dan profesional kreatif membangun website yang cepat, rapi, SEO-ready, dan dirancang untuk meningkatkan kepercayaan calon pelanggan.",
+    "bullets": [
+      "Desain modern & mobile-friendly",
+      "Struktur SEO dasar (siap diiklankan & dicari Google)",
+      "Integrasi WhatsApp / CTA pelanggan",
+      "Website mudah dikelola sendiri (WordPress)"
+    ],
+    "ctaPrimary": "Konsultasi Gratis Sekarang",
+    "ctaSecondary": "Lihat Paket & Harga",
+    "microcopy": "Gratis • Tanpa komitmen • Dibantu pilih paket yang tepat",
+    "rightCard": {
+      "pill": "conversion-first",
+      "title": "Bukan sekadar website cantik",
+      "subtitle": "Ini dampaknya ke bisnis (dan kenapa orang jadi klik WhatsApp).",
+      "outcomes": [
+        {
+          "value": "+63%",
+          "label": "Inquiry WhatsApp",
+          "desc": "CTA lebih jelas & alur rapi"
+        },
+        {
+          "value": "-40%",
+          "label": "Waktu respon admin",
+          "desc": "form/WA terarah, gak bolak-balik"
+        },
+        {
+          "value": "3–7 hari",
+          "label": "Website live",
+          "desc": "siap dipakai & diiklankan"
+        }
+      ],
+      "journeyTitle": "Alur berpikir calon pelanggan",
+      "journey": [
+        {
+          "t": "Datang ke website",
+          "d": "Masih ragu & membandingkan"
+        },
+        {
+          "t": "Lihat pesan + struktur jelas",
+          "d": "Mulai percaya (terasa profesional)"
+        },
+        {
+          "t": "CTA WhatsApp terlihat",
+          "d": "Tahu harus klik yang mana"
+        },
+        {
+          "t": "Chat → deal",
+          "d": "Closing jadi lebih cepat"
+        }
+      ],
+      "chips": [
+        "CTA WhatsApp dibuat “jelas & mengundang”",
+        "Struktur rapi = trust naik"
+      ]
+    },
+    "miniValues": [
+      {
+        "title": "Cepat",
+        "desc": "Live 3–7 hari"
+      },
+      {
+        "title": "Rapi",
+        "desc": "Struktur jelas"
+      },
+      {
+        "title": "Siap jualan",
+        "desc": "CTA WhatsApp"
+      }
+    ],
+    "previewCards": [
+      {
+        "k": "UMKM",
+        "t": "Landing + WhatsApp CTA",
+        "d": "Orang cepat paham & langsung chat."
+      },
+      {
+        "k": "Company",
+        "t": "Company Profile rapi",
+        "d": "Cocok untuk partner/tender."
+      },
+      {
+        "k": "Kreatif",
+        "t": "Portofolio terlihat mahal",
+        "d": "Karya kamu tampil meyakinkan."
+      }
+    ]
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "subtitle": "Ringkas, jelas, dan fokus hasil.",
+    "paragraphs": [],
+    "eyebrow": "Tentang Saya",
+    "desc": "Saya Febrian Budi Utama, web designer & WordPress specialist. Saya sering membantu UMKM, jasa profesional, dan bisnis kreatif yang ingin tampil lebih rapi, lebih serius, dan siap berkembang secara online.",
+    "bullets": [
+      "Spesialis WordPress & website bisnis",
+      "Fokus performa, struktur, dan kejelasan pesan",
+      "Proses kerja jelas & komunikatif",
+      "Support setelah website online"
+    ],
+    "ctaLabel": "Konsultasi Gratis",
+    "ctaHref": "#contact",
+    "helperText": "Gratis • Tanpa komitmen • Dibantu pilih paket",
+    "profileImageUrl": "https://utamadigital.id/wp-content/uploads/2025/11/Gemini_Generated_Image_u2hihwu2hihwu2hi.png",
+    "profileLabel": "Foto / Profil",
+    "profileName": "Febrian Budi Utama",
+    "profileRole": "Web Designer • WordPress Specialist",
+    "focusTitle": "Fokus",
+    "focusText": "Website yang menghasilkan leads",
+    "nicheTitle": "Niche",
+    "nicheText": "UMKM • Jasa • Kreatif"
+  },
+  "services": {
+    "title": "Layanan",
+    "subtitle": "Pilih paket sesuai kebutuhan.",
+    "items": []
+  },
+  "pricing": {
+    "title": "Paket & Harga",
+    "subtitle": "Transparan dan bisa disesuaikan.",
+    "plans": []
+  },
+  "process": {
+    "title": "Proses Kerja",
+    "subtitle": "Simple, cepat, jelas.",
+    "steps": []
+  },
+  "portfolio": {
+    "title": "Portofolio",
+    "subtitle": "Contoh hasil kerja.",
+    "items": [
+      {
+        "title": "Landing page jasa UMKM",
+        "image": "",
+        "url": ""
+      },
+      {
+        "title": "Website wedding organizer",
+        "image": "",
+        "url": ""
+      },
+      {
+        "title": "Portfolio fotografer",
+        "image": "",
+        "url": ""
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimoni",
+    "subtitle": "Kata mereka setelah website jadi.",
+    "featured": "",
+    "items": []
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": []
+  },
+  "finalCta": {
+    "title": "Siap punya website yang bantu closing?",
+    "subtitle": "Kita mulai dari konsultasi gratis.",
+    "button": "Chat WhatsApp"
+  },
+  "audienceSlides": {
+    "eyebrow": "Untuk siapa?",
+    "title": "Website yang disesuaikan dengan jenis bisnismu",
+    "subtitle": "Pilih yang paling mirip dengan bisnismu — isi, struktur, dan CTA akan dibuat menyesuaikan agar lebih cepat dipercaya & lebih cepat jadi chat.",
+    "slides": [
+      {
+        "key": "umkm",
+        "label": "UMKM",
+        "tag": "WhatsApp-first",
+        "title": "Untuk UMKM & bisnis jasa lokal",
+        "desc": "Fokus ke pesan yang cepat dimengerti, tombol WhatsApp terlihat, dan struktur yang bikin orang yakin dalam hitungan detik.",
+        "bullets": [
+          "CTA WhatsApp jelas (orang tahu harus klik yang mana)",
+          "Copy ringkas: jasa, harga, dan cara order gampang dipahami",
+          "Trust booster: testimoni, portofolio, FAQ, garansi",
+          "Siap dipakai iklan (landing + tracking dasar)"
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Perusahaan",
+        "tag": "Company profile",
+        "title": "Untuk company profile & perusahaan",
+        "desc": "Tampilan lebih formal, rapi, dan enak dipresentasikan ke atasan/partner — cocok untuk tender, kerja sama, dan kredibilitas.",
+        "bullets": [
+          "Struktur company profile yang proper (About, Services, Portfolio, Contact)",
+          "Branding konsisten (font, warna, tone visual)",
+          "Meningkatkan trust untuk partner/tender",
+          "Dokumen & kontak mudah ditemukan"
+        ]
+      },
+      {
+        "key": "creative",
+        "label": "Kreatif",
+        "tag": "Portfolio-driven",
+        "title": "Untuk profesional kreatif",
+        "desc": "Highlight karya, sebelum–sesudah, dan social proof agar calon klien merasa “ini profesional” lalu lanjut chat.",
+        "bullets": [
+          "Portofolio tampil ‘mahal’ + mudah dipilih",
+          "CTA booking/WhatsApp dengan template pesan otomatis",
+          "Filter klien yang serius (harga/slot/cara kerja jelas)",
+          "Cocok untuk WO, MUA, fotografer, videografer"
+        ]
+      }
+    ]
+  }
+}
