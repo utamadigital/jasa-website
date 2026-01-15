@@ -14,7 +14,7 @@ export function LogoMark({ className }: { className?: string }) {
             "polygon(50% 3%, 90% 25%, 90% 75%, 50% 97%, 10% 75%, 10% 25%)",
         }}
       >
-        <div className={`h-full w-full rounded-[18px] bg-gradient-to-br from-emerald-300 to-cyan-300 ${compact ? "px-3 py-2 text-xs" : "px-4 py-3"}`} />
+        <div className={`h-full w-full rounded-[18px] bg-gradient-to-br from-emerald-300 to-cyan-300 "px-4 py-3"`} />
       </div>
 
       <div
