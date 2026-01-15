@@ -299,7 +299,7 @@ export default function HeroSection({ content }: { content: any }) {
             <MotionIn delay={0.18}>
               <div className="mt-4 grid gap-2 grid-cols-3">
                 {mini.slice(0, 3).map((it: any, idx: number) => (
-                  <MiniValuePill key={idx} title={it.title} desc={it.desc} compact />
+                  <MiniValuePill key={idx} title={it.title} desc={it.desc} />
                 ))}
               </div>
             </MotionIn>
