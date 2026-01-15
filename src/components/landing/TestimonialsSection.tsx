@@ -95,6 +95,7 @@ export default function TestimonialsSection() {
       eyebrow="TESTIMONI"
       title=""
       subtitle=""
+      className="py-14"
     >
       <MotionIn>
         <Card className="p-6 sm:p-8">

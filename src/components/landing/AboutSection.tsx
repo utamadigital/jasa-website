@@ -30,9 +30,9 @@ export default function AboutSection({ content }: { content?: any }) {
   const ctaHref = a.ctaHref || "#contact";
   const helperText = a.helperText || "Gratis • Tanpa komitmen • Dibantu pilih paket";
 
-  const defaultImgUrl = "https://utamadigital.id/wp-content/uploads/2025/11/Gemini_Generated_Image_u2hihwu2hihwu2hi.png";
+  const defaultImgUrl = "/febrian-profile.png";
 
-  const imgUrl = a.profileImageUrl || defaultImgUrl;
+  const imgUrl = defaultImgUrl; // forced local profile image
 
   const [imgSrc, setImgSrc] = useState(imgUrl);
 
@@ -41,7 +41,9 @@ export default function AboutSection({ content }: { content?: any }) {
   }, [imgUrl]);
 
   const toProxy = (u: string) =>
-    "https://images.weserv.nl/?url=" + encodeURIComponent(u.replace(/^https?:\/\//, ""));
+    u.startsWith("/")
+      ? u
+      : "https://images.weserv.nl/?url=" + encodeURIComponent(u.replace(/^https?:\/\//, ""));
 
   const profileLabel = a.profileLabel || "Foto / Profil";
   const profileName = a.profileName || "Febrian Budi Utama";
@@ -76,7 +78,7 @@ export default function AboutSection({ content }: { content?: any }) {
           </div>
         </MotionIn>
 
-        <MotionIn delay={0.06}>
+        <MotionIn delay={0.06} className="lg:-mt-28 xl:-mt-32">
           <Card className="relative overflow-hidden p-5">
             <div aria-hidden className="absolute inset-0">
               <div className="absolute -top-20 right-0 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
@@ -100,8 +102,8 @@ export default function AboutSection({ content }: { content?: any }) {
                     referrerPolicy="no-referrer"
                     crossOrigin="anonymous"
                     onError={() => {
-                      // Retry via proxy if hotlink/cdn blocks direct load
-                      if (imgSrc === imgUrl) setImgSrc(toProxy(imgUrl));
+                      // Retry via proxy only for remote URLs
+                      if (!imgUrl.startsWith("/") && imgSrc === imgUrl) setImgSrc(toProxy(imgUrl));
                     }}
                   />
                 </div>

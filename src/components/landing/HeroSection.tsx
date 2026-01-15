@@ -4,6 +4,7 @@ import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { scrollToId } from "@/lib/utils";
 import { Badge, MotionIn, PrimaryButton, SecondaryButton, Card } from "./ui";
+import MiniTrustStrip from "./MiniTrustStrip";
 
 function RotatingWord({ words }: { words: string[] }) {
   const safeWords = words?.length ? words : ["mendatangkan pelanggan"];
@@ -222,8 +223,8 @@ export default function HeroSection({ content }: { content: any }) {
       "Website mudah dikelola sendiri (WordPress)",
     ];
 
-  const primary = c.primaryCta || { label: "Konsultasi Gratis", href: "#contact" };
-  const secondary = c.secondaryCta || { label: "Lihat Paket & Harga", href: "#paket" };
+  const primary = c.primaryCta || { label: "Konsultasi Gratis", href: "https://wa.me/6289654543003?text=Halo%2C%20saya%20mau%20konsultasi%20gratis%20pembuatan%20website.%20Bisa%20bantu%20jelaskan%20paket%20dan%20estimasinya%3F" };
+  const secondary = c.secondaryCta || { label: "Lihat Paket & Harga", href: "#pricing" };
 
   const mini = c.miniValues || [
     { title: "Cepat", desc: "Live 3–7 hari" },
@@ -274,41 +275,34 @@ export default function HeroSection({ content }: { content: any }) {
             </div>
 
             <MotionIn delay={0.34}>
-  <div
-    className="
-      mt-7
-      grid grid-cols-2 gap-3
-      sm:flex sm:flex-wrap sm:items-center sm:gap-3
-    "
-  >
-    <PrimaryButton href={primary.href} className="h-11 w-full px-5">
+  <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
+    <PrimaryButton href={primary.href} className="h-11 w-full px-5 sm:w-auto">
       {primary.label}
     </PrimaryButton>
 
-    <SecondaryButton href="#pricing" className="h-11 w-full px-5">
+    <SecondaryButton href={secondary.href} className="h-11 w-full px-5 sm:w-auto">
       {secondary.label}
     </SecondaryButton>
+  </div>
 
-    {/* helper text: full width di mobile, inline di desktop */}
-    <div className="col-span-2 text-xs text-white/55 sm:col-auto">
-      Gratis • Tanpa komitmen • Dibantu pilih paket yang tepat
-    </div>
+  {/* trust strip (keep it under CTA on mobile) */}
+  <div className="mt-4">
+    <MiniTrustStrip />
   </div>
 </MotionIn>
-
-
-            <MotionIn delay={0.42}>
-              <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                {mini.slice(0, 3).map((it: any, idx: number) => (
-                  <MiniValuePill key={idx} title={it.title} desc={it.desc} />
-                ))}
-              </div>
-            </MotionIn>
           </div>
 
           {/* Right */}
           <div className="lg:col-span-5 lg:-mt-6">
-  <PreviewStack content={content} />
+            <PreviewStack content={content} />
+
+            <MotionIn delay={0.18}>
+              <div className="mt-4 grid gap-2 grid-cols-3">
+                {mini.slice(0, 3).map((it: any, idx: number) => (
+                  <MiniValuePill key={idx} title={it.title} desc={it.desc} compact />
+                ))}
+              </div>
+            </MotionIn>
 </div>
         </div>
 

@@ -6,6 +6,7 @@ import { readSiteContent } from "@/lib/siteContent";
 import MiniProofStrip from "@/components/landing/MiniProofStrip";
 import AboutSection from "@/components/landing/AboutSection";
 import ServicesSection from "@/components/landing/ServicesSection";
+
 import PricingSection from "@/components/landing/PricingSection";
 import ProcessSection from "@/components/landing/ProcessSection";
 import PortfolioSection from "@/components/landing/PortfolioSection";
@@ -19,21 +20,23 @@ export default function Page() {
   return (
     <PreloaderShell>
       <div className="min-h-dvh bg-slate-950 text-white">
-      <LandingHeader />
-      <main>
+        <LandingHeader />
+        <main>
         <HeroSection content={content} />
         <AudienceSlidesSection content={content} />
         <MiniProofStrip />
         <AboutSection content={content} />
         <ServicesSection />
+
         <PricingSection />
+
         <ProcessSection />
         <PortfolioSection />
         <TestimonialsSection />
         <FaqSection />
         <FinalCtaSection />
-      </main>
-      <Footer />
+        </main>
+        <Footer />
       </div>
     </PreloaderShell>
   );
