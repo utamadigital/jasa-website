@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { SectionShell } from "./SectionShell";
 import { Card, MotionIn, PrimaryButton, SecondaryButton, Badge } from "./ui";
 import { scrollToId } from "@/lib/utils";
@@ -10,12 +11,14 @@ type Item = {
   title: string;
   category: string;
   bullets: { k: string; v: string }[];
+  cover?: string;
 };
 
 const ITEMS: Item[] = [
   {
     title: "Website Tour & Travel",
     category: "Business Website",
+    cover: "/porto/balikomodo.jpg",
     bullets: [
       { k: "Tantangan", v: "Brand terlihat kurang meyakinkan & info tercecer." },
       { k: "Solusi", v: "Struktur halaman rapi + CTA WhatsApp jelas." },
@@ -25,6 +28,10 @@ const ITEMS: Item[] = [
   {
     title: "Website Villa",
     category: "Hospitality",
+    cover: "/porto/villabintangbaru.jpg",
+    challenge: "Website lama kurang mencerminkan kesan premium villa.",
+    solution: "Desain visual elegan + galeri besar + CTA WhatsApp cepat.",
+    result: "Brand terlihat lebih eksklusif dan inquiry meningkat.",
     bullets: [
       { k: "Tantangan", v: "Butuh tampil premium & enak dilihat di mobile." },
       { k: "Solusi", v: "Desain clean + komposisi foto + CTA booking." },
@@ -34,6 +41,10 @@ const ITEMS: Item[] = [
   {
     title: "Website Pendidikan",
     category: "Landing + Form",
+    cover: "/porto/pkbm.jpg",
+    challenge: "Informasi program sulit dipahami dan pendaftaran manual.",
+    solution: "Landing terstruktur + form pendaftaran online.",
+    result: "Calon siswa lebih mudah daftar dan admin lebih rapi.",
     bullets: [
       { k: "Tantangan", v: "Butuh pendaftaran mudah + info ringkas." },
       { k: "Solusi", v: "Landing fokus + section yang terstruktur." },
@@ -96,7 +107,12 @@ function Modal({
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-white/10 bg-slate-950/90 shadow-2xl">
+            {/*
+              Keep modal always inside viewport:
+              - max height based on viewport
+              - scroll content if it grows
+            */}
+            <div className="w-full max-w-xl max-h-[calc(100vh-2rem)] overflow-hidden rounded-2xl border border-white/10 bg-slate-950/90 shadow-2xl">
               <div className="flex items-start justify-between gap-4 border-b border-white/10 p-5">
                 <div>
                   <div className="text-lg font-semibold text-white">{item.title}</div>
@@ -111,23 +127,43 @@ function Modal({
                 </button>
               </div>
 
-              <div className="p-5">
-                <div className="relative h-40 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/6 to-white/[0.02]">
-  <div aria-hidden className="absolute inset-0 opacity-[0.8]">
-    <div className="absolute -top-10 left-1/2 h-28 w-72 -translate-x-1/2 rounded-full bg-emerald-400/10 blur-2xl" />
-    <div className="absolute -bottom-10 left-1/4 h-28 w-64 -translate-x-1/2 rounded-full bg-cyan-400/8 blur-2xl" />
-  </div>
-  <div className="relative flex h-full flex-col justify-between p-4">
-    <div className="inline-flex items-center gap-2 self-start rounded-full bg-black/30 px-3 py-1 text-[11px] font-semibold text-white/80 ring-1 ring-white/10">
-      <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-300" />
-      Preview (placeholder)
-    </div>
-    <div className="grid gap-2">
-      <div className="h-3 w-3/4 rounded-full bg-white/10" />
-      <div className="h-3 w-2/3 rounded-full bg-white/8" />
-    </div>
-  </div>
-</div>
+              <div className="p-5 overflow-y-auto max-h-[calc(100vh-2rem-82px)]">
+                {/* preview box: responsive height + never bleeds outside */}
+                <div className="relative h-44 sm:h-52 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/6 to-white/[0.02]">
+                  {item.cover ? (
+                    <>
+                      <Image
+                        src={item.cover}
+                        alt={`${item.title} preview`}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 768px) 100vw, 560px"
+                      />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/70" />
+                      <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-black/30 px-3 py-1 text-[11px] font-semibold text-white/80 ring-1 ring-white/10">
+                        <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                        Preview
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div aria-hidden className="absolute inset-0 opacity-[0.8]">
+                        <div className="absolute -top-10 left-1/2 h-28 w-72 -translate-x-1/2 rounded-full bg-emerald-400/10 blur-2xl" />
+                        <div className="absolute -bottom-10 left-1/4 h-28 w-64 -translate-x-1/2 rounded-full bg-cyan-400/8 blur-2xl" />
+                      </div>
+                      <div className="relative flex h-full flex-col justify-between p-4">
+                        <div className="inline-flex items-center gap-2 self-start rounded-full bg-black/30 px-3 py-1 text-[11px] font-semibold text-white/80 ring-1 ring-white/10">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                          Preview (placeholder)
+                        </div>
+                        <div className="grid gap-2">
+                          <div className="h-3 w-3/4 rounded-full bg-white/10" />
+                          <div className="h-3 w-2/3 rounded-full bg-white/8" />
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
                 <div className="mt-5 grid gap-3">
                   {item.bullets.map((b) => (
                     <div key={b.k} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
@@ -175,8 +211,43 @@ export default function PortfolioSection() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((it, idx) => (
             <MotionIn key={it.title} delay={0.02 * idx}>
-              <Card className="overflow-hidden">
-                <div className="h-40 border-b border-white/10 bg-gradient-to-b from-white/6 to-white/[0.02]" />
+              <Card className="group overflow-hidden">
+                <div className="relative h-40 overflow-hidden border-b border-white/10 bg-gradient-to-b from-white/6 to-white/[0.02]">
+                  {it.cover ? (
+                    <>
+                      {/* Static top preview */}
+                      <Image
+                        src={it.cover}
+                        alt={`${it.title} preview`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]"
+                        priority={idx === 0}
+                      />
+
+                      {/* overlay to keep it premium + readable */}
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/70" />
+
+                      {/* Auto-pan hint on hover (feels like scrolling a real page) */}
+                      <div
+                        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        style={{
+                          backgroundImage: `url(${it.cover})`,
+                          backgroundSize: "cover",
+                          backgroundRepeat: "no-repeat",
+                          backgroundPosition: "50% 0%",
+                          // slower = more premium
+                          animation: "portoPanDown 16s ease-in-out infinite alternate",
+                        }}
+                      />
+                    </>
+                  ) : (
+                    <div aria-hidden className="absolute inset-0">
+                      <div className="absolute -top-10 left-1/2 h-28 w-72 -translate-x-1/2 rounded-full bg-emerald-400/10 blur-2xl" />
+                      <div className="absolute -bottom-10 left-1/4 h-28 w-64 -translate-x-1/2 rounded-full bg-cyan-400/8 blur-2xl" />
+                    </div>
+                  )}
+                </div>
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-3">
                     <div>
@@ -209,6 +280,18 @@ export default function PortfolioSection() {
             </MotionIn>
           ))}
         </div>
+
+        {/* keyframes for the portfolio hover pan */}
+        <style jsx global>{`
+          @keyframes portoPanDown {
+            0% {
+              background-position: 50% 0%;
+            }
+            100% {
+              background-position: 50% 100%;
+            }
+          }
+        `}</style>
 
         <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm text-white/75">
           Mau versi website seperti di atas untuk bisnismu?{" "}

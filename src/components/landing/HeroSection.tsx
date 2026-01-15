@@ -281,17 +281,11 @@ export default function HeroSection({ content }: { content: any }) {
       sm:flex sm:flex-wrap sm:items-center sm:gap-3
     "
   >
-    <PrimaryButton
-      onClick={() => scrollToId(primary.href)}
-      className="h-11 w-full px-5"
-    >
+    <PrimaryButton href={primary.href} className="h-11 w-full px-5">
       {primary.label}
     </PrimaryButton>
 
-    <SecondaryButton
-      onClick={() => scrollToId(secondary.href)}
-      className="h-11 w-full px-5"
-    >
+    <SecondaryButton href="#pricing" className="h-11 w-full px-5">
       {secondary.label}
     </SecondaryButton>
 

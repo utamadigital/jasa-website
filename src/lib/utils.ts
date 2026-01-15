@@ -3,7 +3,8 @@ export function cn(...classes: Array<string | false | null | undefined>) {
 }
 
 export function scrollToId(id: string) {
-  const el = document.getElementById(id);
+  const safeId = (id || "").replace(/^#/, "");
+  const el = document.getElementById(safeId);
   if (!el) return;
   el.scrollIntoView({ behavior: "smooth", block: "start" });
 }

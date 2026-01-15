@@ -65,6 +65,15 @@ export default function PricingSection() {
     setSelected(id);
   }
 
+
+  function waHref(planName: string) {
+    const base = "https://wa.me/6289654543003";
+    const text = encodeURIComponent(
+      `Halo, saya tertarik Paket ${planName} untuk pembuatan website. Bisa minta detail fitur, estimasi waktu pengerjaan, dan langkah pemesanan?`
+    );
+    return `${base}?text=${text}`;
+  }
+
   return (
     <SectionShell
       id="pricing"
@@ -116,7 +125,7 @@ export default function PricingSection() {
       <span className="text-white/70">Pilih</span>
     )}
   </div>
-</div>
+                  </div>
 
 <div className="flex items-start justify-between gap-3">
                     <div>
@@ -138,10 +147,10 @@ export default function PricingSection() {
                   </div>
 
                   <div className="mt-6 grid gap-2">
-                    <PrimaryButton onClick={() => scrollToId("contact")} className="w-full">
+                    <PrimaryButton href={waHref(p.name)} className="w-full">
                       Pilih Paket {p.name} → Konsultasi
                     </PrimaryButton>
-</div>
+                  </div>
                 </Card>
               </button>
             </MotionIn>

@@ -30,7 +30,7 @@ export default function FinalCtaSection() {
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <PrimaryButton onClick={() => alert("Ganti ini dengan link WA / form kamu ya!")}>
+                <PrimaryButton href="https://wa.me/6289654543003?text=Halo%2C%20saya%20mau%20konsultasi%20gratis%20pembuatan%20website.%20Bisa%20bantu%20jelaskan%20paket%20dan%20estimasinya%3F">
                   Konsultasi Gratis Sekarang
                 </PrimaryButton>
                 <SecondaryButton onClick={() => scrollToId("pricing")}>Lihat Paket</SecondaryButton>
