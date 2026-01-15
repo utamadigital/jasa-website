@@ -10,8 +10,12 @@ import { scrollToId } from "@/lib/utils";
 type Item = {
   title: string;
   category: string;
-  bullets: { k: string; v: string }[];
   cover?: string;
+  // detail (optional)
+  challenge?: string;
+  solution?: string;
+  result?: string;
+  bullets: { k: string; v: string }[];
 };
 
 const ITEMS: Item[] = [
